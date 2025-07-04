@@ -2,6 +2,6 @@
 
 int main() {
     Dstring test = "Hello World";
-    Dstring test2 = test + test;
+    std::cin >> test;
     return 0;
 }
