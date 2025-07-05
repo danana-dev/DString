@@ -40,20 +40,20 @@ inline std::ostream& operator<<(std::ostream& os, const Dstring& ds) {
 }
 
 inline std::istream& operator>>(std::istream& is, Dstring& ds) {
-    // TODO: WIP
-    std::cout << "Start\n";
     ds.cleanup();
     ds.data = new char[1]{'\0'};
+
     Dstring dtemp;
     dtemp.data = new char[1]{'\0'};
     dtemp.length = 1;
+
     char ctemp;
     while (is.get(ctemp)) {
-        std::cout << "Retrieve character\n";
+        if (ctemp == '\n') { break; }
         dtemp.data[0] = ctemp;
         ds = ds + dtemp;
     }
-    std::cout << "Finish\n";
+
     dtemp.cleanup();
     return is;
 }
