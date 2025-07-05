@@ -77,8 +77,7 @@ Dstring Dstring::operator+(Dstring const& obj) {
 }
 
 Dstring Dstring::operator-(Dstring const& obj) {
-    // TODO:
-    std::cout << "undefined behavior\n";
+    // std::cout << "UNDEFINED BEHAVIOR\n";
     Dstring result;
     return result;
 }
